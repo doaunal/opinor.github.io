@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Yazı Ekle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Yeni Yazı Ekle</h2>
+    <form action="create_post.php" method="post">
+        <label for="title">Başlık:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="content">İçerik:</label>
+        <textarea id="content" name="content" rows="10" required></textarea>
+        <button type="submit">Yazıyı Paylaş</button>
+    </form>
+</body>
+</html>
