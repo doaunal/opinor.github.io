@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Caudex', sans-serif;
 }
 /*.container{
     width: 100%;
@@ -22,13 +22,13 @@ body {
     background-color: rgba(38, 175, 107, 0.5);
 }
 .icon{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     cursor: pointer;
-    margin: 30px 0;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 10px 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 nav{
     flex: 1;
@@ -50,8 +50,9 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #05411b;
-    font-size: 14px;
+    font-size: 16px;
     align-self: start;
+    font-style: bold;
 }
 nav ul li a:hover{
     color: #07ad44 ;
@@ -62,7 +63,7 @@ nav ul li a:hover{
     margin-right: 200px;
     display: flex;
     align-items: center;
-    gap: 10px; /* Aralarındaki boşluğu ayarlar */
+    gap: 5px; /* Aralarındaki boşluğu ayarlar */
 }
 
 .search input {
@@ -96,7 +97,7 @@ nav ul li a:hover{
 }
 
 .auth-buttons .signup {
-    background-color: #07ad44; /* Sign In butonu rengi */
+    background-color: #0b7331; /* Sign In butonu rengi */
 }
 
 /* Hover efektleri */
@@ -106,7 +107,7 @@ nav ul li a:hover{
 
 main.blog-container {
     padding: 20px;
-    margin-top: 120px;  /* Header ile arasına boşluk ekler */
+    margin-top: 30px;
 }
 
 .blog-list {
@@ -118,6 +119,8 @@ main.blog-container {
 }
 
 .blog-card {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -125,9 +128,22 @@ main.blog-container {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.blog-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.blog-content {
+    flex: 1;
+}
+
 .blog-card h2 {
     font-size: 20px;
     color: #05411b;
+    margin-bottom: 10px;
 }
 
 .blog-card p {
@@ -149,4 +165,127 @@ main.blog-container {
 
 .read-more:hover {
     background-color: #07ad44;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 8px 15px;
+    background-color: #05411b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#page-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: #05411b;
+}
+/* Auth container kısmı flex olarak düzenlendi */
+/* Auth container kısmı flex olarak düzenlendi */
+.auth-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Büyüteç simgesinin stilini resimle değiştireceğiz */
+.search-icon {
+    width: 20px; /* Resmin boyutunu belirliyoruz */
+    height: 20px;
+    cursor: pointer;
+    margin-right: 15px; /* Log in ve Sign in butonlarından önce biraz boşluk bırak */
+    transition: all 0.3s ease;
+}
+
+/* Büyüteç simgesine hover efekti */
+.search-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Arama kutusunun görünmesi için */
+.search-container:hover .search-box {
+    display: block;
+}
+
+/* Arama kutusunun tam sol kısmında olacak şekilde gizli */
+.search-box {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Navbar kısmı düzenlendi */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: rgba(38, 175, 107, 0.5);
+    box-sizing: border-box;
+}
+
+.navbar .auth-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Aralarındaki boşluğu ayarla */
+}
+
+.auth-buttons .btn {
+    padding: 5px 15px;
+    font-size: 13px;
+}
+
+/* Büyüteç simgesine resim ekleyebilirsiniz (magnify.png) */
+.search-icon {
+    background-image: url('magnify.png'); /* Resmi ekleyin */
+    background-size: contain; /* Resmin boyutunun simgeye uygun olmasını sağlar */
+    background-repeat: no-repeat; /* Tekrarlamaması için */
+    width: 20px;
+    height: 20px;
+}
+/* Flexbox ile hizalama */
+.navbar nav {
+    flex-grow: 1; /* Menülerin sağa yaslanmasını engellemek için */
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Navbardaki menü öğeleri */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px; /* Menüler arasındaki boşluğu ayarlıyoruz */
+}
+
+/* Butonlar hizalı ve sıralı olacak şekilde */
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
 }
