@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Blog Platform</h1>
+        <h1>Blog Platform- Anasayfa</h1>
         <nav>
             <a href="login.html">Giriş Yap</a>
             <a href="register.html">Kayıt Ol</a>
@@ -17,7 +17,19 @@
     <main>
         <h2>Tüm Yazılar</h2>
         <div class="post-list">
-            <!-- Blog yazıları burada listelenecek -->
+            <!-- PHP kullanarak burada yazıları listele -->
+            <?php
+            // Basit bir örnek:
+            include 'database.php';
+            $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='post'>";
+                echo "<h3><a href='post_detail.php?id=" . $row['id'] . "'>" . $row['title'] . "</a></h3>";
+                echo "<p>" . substr($row['content'], 0, 100) . "...</p>";
+                echo "<p>Yazar: " . $row['author_id'] . "</p>";
+                echo "</div>";
+            }
+            ?>
         </div>
     </main>
 </body>
