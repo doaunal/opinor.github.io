@@ -86,18 +86,57 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-// 'Ara' butonuna tıklanınca çalışacak fonksiyonu yazıyoruz
-document.getElementById("search-button").addEventListener("click", function() {
-    // Kullanıcıdan alınan yazıyı alıyoruz
-    const searchText = document.getElementById("search-input").value;
+document.addEventListener("DOMContentLoaded", () => {
+    // Büyüteç simgesini seçiyoruz
+    const searchIcon = document.getElementById("search-icon");
+    const searchBox = document.getElementById("search-box");
 
-    // Eğer kullanıcı boş bir arama yapmamışsa
-    if (searchText.trim() !== "") {
-        // Arama sonucunu gösteriyoruz
-        document.getElementById("search-text").innerText = searchText;
-        document.getElementById("search-result").style.display = "block";
-    } else {
-        // Eğer boşsa, arama sonucunu gizli tutuyoruz
-        document.getElementById("search-result").style.display = "none";
-    }
+    // Büyüteç simgesine tıklanınca arama kutusunu aç/kapat
+    searchIcon.addEventListener("click", () => {
+        if (searchBox.style.display === "none" || searchBox.style.display === "") {
+            searchBox.style.display = "block"; // Göster
+        } else {
+            searchBox.style.display = "none"; // Gizle
+        }
+    });
 });
+// Enter'a basıldığında arama yapma işlevi
+function handleSearch(event) {
+    if (event.key === "Enter") {
+        performSearch();
+    }
+}
+
+// Arama işlemini gerçekleştirme
+function performSearch() {
+    const searchInput = document.getElementById("search-input").value.trim();
+    if (searchInput) {
+        // Burada arama işlemi yapılır
+        console.log("Aranıyor:", searchInput);
+        alert(`Arama yapılıyor: ${searchInput}`);
+    } else {
+        alert("Lütfen bir şey yazın!");
+    }
+}
+// Blog sayfasındaki dinamik verileri doldurmak için bir JSON örneği:
+const blogData = {
+    title: "Nasıl Daha Verimli Kod Yazılır?",
+    author: "Ali Veli",
+    date: "23 Kasım 2024",
+    image: "https://via.placeholder.com/800x400",
+    content: `
+      <p>Verimli kod yazmak, yazılım geliştirme dünyasında önemli bir beceridir. 
+      Bu yazıda, kod yazımınızı geliştirecek en iyi uygulamaları paylaşacağız.</p>
+      
+      <h2>Neden Verimli Kod?</h2>
+      <p>Temiz ve verimli kod, daha az hata yapmanızı, daha hızlı geliştirme süreçleri oluşturmanızı sağlar. 
+      Ayrıca ekip arkadaşlarınızın projede daha rahat çalışmasına olanak tanır.</p>
+    `
+  };
+  
+  // Blog verilerini DOM'a aktar
+  document.getElementById("blog-title").innerText = blogData.title;
+  document.getElementById("blog-author").innerText = blogData.author;
+  document.getElementById("blog-date").innerText = blogData.date;
+  document.getElementById("blog-image").src = blogData.image;
+  document.getElementById("blog-body").innerHTML = blogData.content;

@@ -197,43 +197,60 @@ main.blog-container {
 /* Auth container kısmı flex olarak düzenlendi */
 /* Auth container kısmı flex olarak düzenlendi */
 .auth-container {
+    position: relative; /* Konumlandırmayı göreceli yapar */
     display: flex;
     align-items: center;
-    position: relative;
+    gap: 10px; /* Öğeler arasındaki boşluğu ayarlar */
 }
 
-/* Büyüteç simgesinin stilini resimle değiştireceğiz */
 .search-icon {
-    width: 20px; /* Resmin boyutunu belirliyoruz */
-    height: 20px;
     cursor: pointer;
-    margin-right: 15px; /* Log in ve Sign in butonlarından önce biraz boşluk bırak */
+    font-size: 20px; /* Büyüteç simgesinin boyutunu ayarla */
     transition: all 0.3s ease;
 }
 
-/* Büyüteç simgesine hover efekti */
 .search-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Hover efekti */
 }
 
-/* Arama kutusunun görünmesi için */
-.search-container:hover .search-box {
-    display: block;
-}
-
-/* Arama kutusunun tam sol kısmında olacak şekilde gizli */
 .search-box {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    z-index: 10;
+    display: none; /* Başlangıçta gizli */
+    position: absolute; /* Mutlak konumlandırma */
+    right: calc(100% + 10px); /* Sağ tarafın tamamen dışına taşı ve 10px boşluk ekle */
+    top: 50%; /* Yatay olarak ortala */
+    transform: translateY(-50%); /* Dikey olarak ortala */
+    background: white; /* Arka plan rengi */
+    border: 1px solid #ccc; /* Çerçeve */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    padding: 5px; /* İç boşluk */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
 }
 
+.srch {
+    border: 1px solid #ccc; /* Yazı kutusuna çerçeve ekle */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    padding: 5px; /* İç boşluk */
+    font-size: 13px; /* Yazı boyutu */
+    width: 150px; /* Genişliği küçült */
+}
+
+/* Büyütece tıklanınca kutuyu göster */
+#search-icon:hover + .search-box,
+#search-box:hover {
+    display: block; /* Arama kutusunu göster */
+}
+
+/* Büyütece tıklanınca kutuyu göster */
+#search-icon:hover + .search-box,
+#search-box:hover {
+    display: block; /* Arama kutusunu göster */
+}
+
+/* Büyütece tıklanınca kutuyu göster */
+#search-icon:hover + .search-box,
+#search-box:hover {
+    display: flex; /* Arama kutusunu göster */
+}
 .auth-buttons {
     display: flex;
     gap: 10px;
@@ -269,6 +286,7 @@ main.blog-container {
     background-repeat: no-repeat; /* Tekrarlamaması için */
     width: 20px;
     height: 20px;
+    
 }
 /* Flexbox ile hizalama */
 .navbar nav {
@@ -288,4 +306,48 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-left: 30px;
+}
+/* Blog Detayı */
+.blog-detail-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.blog-detail {
+    margin-top: 40px;
+}
+
+.blog-detail h1 {
+    font-size: 30px;
+    color: #05411b;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#blogImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.blog-body {
+    font-size: 16px;
+    color: #333;
+}
+
+.blog-body h2 {
+    font-size: 24px;
+    color: #05411b;
+    margin-top: 20px;
 }

@@ -17,26 +17,32 @@
             <img src="Remove-bg.ai_1732007045903.png" class="icon">
             <nav>
               <ul>
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Popüler</a></li>
-                <li><a href="#">En Sık Tıklanan</a></li>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="populer.html">Popüler</a></li>
+                <li><a href="en.html">En Sık Tıklanan</a></li>
               </ul>
             </nav>
             <div class="auth-container">
-              <!-- Büyüteç simgesi burada yer alacak -->
-              <i class="fa-regular fa-magnifying-glass search-icon" id="search-icon"></i>
-              
-              <!-- Log in ve Sign in butonları -->
-              <div class="auth-buttons">
-                <button class="btn login">Log In</button>
-                <button class="btn signup">Sign In</button>
-              </div>
-      
-              <!-- Arama kutusu (başlangıçta gizli) -->
+              <!-- Arama kutusu -->
               <div class="search-box" id="search-box">
-                <input type="search" id="search-input" placeholder="Yazınız..." class="srch">
-                <button class="btn" id="search-button">Ara</button>
+                  <input 
+                      type="search" 
+                      id="search-input" 
+                      placeholder="Yazınız..." 
+                      class="srch"
+                      onkeypress="handleSearch(event)">
               </div>
+              <i 
+                  class="fa-solid fa-magnifying-glass search-icon" 
+                  id="search-icon" 
+                  onclick="performSearch()">
+              </i>
+              <!-- Giriş yap ve kayıt ol butonları -->
+              <div class="auth-buttons">
+                  <button class="btn login">Log In</button>
+                  <button class="btn signup">Sign In</button>
+              </div>
+          </div>
             </div>
           </div>
         </div>
