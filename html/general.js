@@ -108,14 +108,25 @@ function handleSearch(event) {
 }
 
 // Arama işlemini gerçekleştirme
+// Arama işlemini gerçekleştirme
 function performSearch() {
     const searchInput = document.getElementById("search-input").value.trim();
+    const searchStatus = document.getElementById("search-status"); // Durum yazısını seçiyoruz
+
     if (searchInput) {
         // Burada arama işlemi yapılır
         console.log("Aranıyor:", searchInput);
-        alert(`Arama yapılıyor: ${searchInput}`);
+
+        // "Aranıyor..." mesajını ekranda gösterebiliriz (örneğin bir div ile)
+        searchStatus.style.display = "block"; // Yazıyı göster
+
+        // Arama tamamlandıktan sonra 2 saniye sonra yazıyı gizle
+        setTimeout(() => {
+            searchStatus.style.display = "none"; // Yazıyı gizle
+        }, 2000); // 2 saniye simülasyonu
     } else {
-        alert("Lütfen bir şey yazın!");
+        // Eğer arama kutusu boşsa, yazıyı gizle
+        searchStatus.style.display = "none";
     }
 }
 // Blog sayfasındaki dinamik verileri doldurmak için bir JSON örneği:

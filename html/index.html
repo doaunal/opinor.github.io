@@ -8,48 +8,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
 </head>
 <body>
     
-    <header>
-        <div class="container">
-          <div class="navbar">
+  <header>
+    <div class="container">
+        <div class="navbar">
             <img src="Remove-bg.ai_1732007045903.png" class="icon">
             <nav>
-              <ul>
-                <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="populer.html">Popüler</a></li>
-                <li><a href="en.html">En Sık Tıklanan</a></li>
-              </ul>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="populer.html">Popüler</a></li>
+                    <li><a href="en.html">En Sık Tıklanan</a></li>
+                </ul>
             </nav>
             <div class="auth-container">
-              <!-- Arama kutusu -->
-              <div class="search-box" id="search-box">
-                  <input 
-                      type="search" 
-                      id="search-input" 
-                      placeholder="Yazınız..." 
-                      class="srch"
-                      onkeypress="handleSearch(event)">
+                <!-- Arama kutusu -->
+                <div class="search-box" id="search-box">
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="Yazınız..." 
+                        class="srch"
+                        onkeypress="handleSearch(event)">
+                </div>
+                <i 
+                    class="fa-solid fa-magnifying-glass search-icon" 
+                    id="search-icon" 
+                    onclick="performSearch()">
+                </i>
+                <!-- Giriş yap ve kayıt ol butonları -->
+                <div class="auth-buttons">
+                  <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
+                  <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
               </div>
-              <i 
-                  class="fa-solid fa-magnifying-glass search-icon" 
-                  id="search-icon" 
-                  onclick="performSearch()">
-              </i>
-              <!-- Giriş yap ve kayıt ol butonları -->
-              <div class="auth-buttons">
-                  <button class="btn login">Log In</button>
-                  <button class="btn signup">Sign In</button>
-              </div>
-          </div>
             </div>
-          </div>
         </div>
-      </header>
+    </div>
+</header>
   <div id="search-result" style="display:none; margin-top:20px; padding: 10px; background-color: #f0f0f0; border: 1px solid #ddd;">
     <p>Aradığınız metin: <span id="search-text"></span></p>
   </div>
+
+  <!-- Arama durumu yazısı -->
+<div id="search-status" style="display:none; color: #333; font-size: 18px; padding: 10px; text-align: center;">
+  Aranıyor...
+</div>
 
   <script src="general.js" defer></script>
 
@@ -63,7 +72,5 @@
       <button id="next-btn" class="page-btn">&#8594;</button> <!-- Sonraki ok işareti -->
     </div>
 </main>
-
-
 </body>
 </html>
