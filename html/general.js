@@ -151,3 +151,4 @@ const blogData = {
   document.getElementById("blog-date").innerText = blogData.date;
   document.getElementById("blog-image").src = blogData.image;
   document.getElementById("blog-body").innerHTML = blogData.content;
+  
