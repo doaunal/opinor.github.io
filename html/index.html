@@ -16,41 +16,41 @@
 </head>
 <body>
     
-  <header>
-    <div class="container">
-        <div class="navbar">
-            <img src="Remove-bg.ai_1732007045903.png" class="icon">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Anasayfa</a></li>
-                    <li><a href="populer.html">Popüler</a></li>
-                    <li><a href="en.html">En Sık Tıklanan</a></li>
-                </ul>
-            </nav>
-            <div class="auth-container">
-                <!-- Arama kutusu -->
-                <div class="search-box" id="search-box">
-                    <input 
-                        type="search" 
-                        id="search-input" 
-                        placeholder="Yazınız..." 
-                        class="srch"
-                        onkeypress="handleSearch(event)">
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <img src="Remove-bg.ai_1732007045903.png" class="icon">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="populer.html">Popüler</a></li>
+                        <li><a href="yazilarimiz.html">Yazılarımız</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-container">
+                    <!-- Arama kutusu -->
+                    <div class="search-box" id="search-box">
+                        <input 
+                            type="search" 
+                            id="search-input" 
+                            placeholder="Yazınız..." 
+                            class="srch"
+                            onkeypress="handleSearch(event)">
+                    </div>
+                    <i 
+                        class="fa-solid fa-magnifying-glass search-icon" 
+                        id="search-icon" 
+                        onclick="performSearch()">
+                    </i>
+                    <!-- Giriş yap ve kayıt ol butonları -->
+                    <div class="auth-buttons">
+                      <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
+                      <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
+                  </div>
                 </div>
-                <i 
-                    class="fa-solid fa-magnifying-glass search-icon" 
-                    id="search-icon" 
-                    onclick="performSearch()">
-                </i>
-                <!-- Giriş yap ve kayıt ol butonları -->
-                <div class="auth-buttons">
-                  <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
-                  <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
-              </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
   <div id="search-result" style="display:none; margin-top:20px; padding: 10px; background-color: #f0f0f0; border: 1px solid #ddd;">
     <p>Aradığınız metin: <span id="search-text"></span></p>
   </div>

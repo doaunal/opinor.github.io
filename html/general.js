@@ -152,3 +152,6 @@ const blogData = {
   document.getElementById("blog-image").src = blogData.image;
   document.getElementById("blog-body").innerHTML = blogData.content;
   
+
+
+  
