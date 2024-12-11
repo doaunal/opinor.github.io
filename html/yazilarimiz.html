@@ -67,6 +67,212 @@
   </main>
     
       <script src="general.js" defer></script>
-    
+ 
+      <style>
+        body {
+            background-color: #e7cbaf;
+            color: #333;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(32, 140, 86);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+            z-index: 100;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .floating-button span {
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, width 0.5s steps(30, end);
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .floating-button.hover {
+            width: 250px;
+            height: 60px;
+            border-radius: 30px;
+        }
+
+        .floating-button.hover span {
+            opacity: 1;
+            animation: typing 2s steps(30, end) forwards;
+        }
+
+        .floating-button:active {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .floating-button .pencil-icon {
+            position: absolute;
+            font-size: 18px;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .floating-button.hover .pencil-icon {
+            opacity: 0;
+        }
+
+        .floating-button.blink {
+            animation: blink 3s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .modal h2 {
+            font-family: 'Cursive', sans-serif;
+            color: #32c850;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .modal p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .modal button {
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: rgb(32, 140, 86);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal button:hover {
+            background-color: #28a745;
+        }
+
+        .modal .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .modal .close-btn:hover {
+            color: #c00;
+        }
+    </style>
+    <body>
+
+      <!-- Floating Button -->
+      <div class="floating-button" id="floatingButton">
+          <span>Yazmaya Başlamak İçin Tıklayın</span>
+          <span class="pencil-icon">✏️</span>
+      </div>
+  
+      <!-- Modal -->
+      <div id="modal" class="modal">
+          <button class="close-btn" id="closeModal">X</button>
+          <h2>Opinor'a Hoş Geldiniz!</h2>
+          <p>İçerik oluşturmaya başlamak için üye olmalısınız. Eğer üyeliğiniz varsa giriş yaptıktan sonra içeriğinizi oluşturmaya devam edebilirsiniz.</p>
+          <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
+          <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
+      </div>
+  
+      <script>
+          const floatingButton = document.getElementById('floatingButton');
+          const modal = document.getElementById('modal');
+          const signupBtn = document.getElementById('signupBtn');
+          const loginBtn = document.getElementById('loginBtn');
+          const closeModal = document.getElementById('closeModal');
+          const body = document.body;
+  
+          floatingButton.addEventListener('mouseenter', () => {
+              if (modal.style.display !== "block") {
+                  floatingButton.classList.add('hover');
+                  floatingButton.classList.remove('blink');
+              }
+          });
+  
+          floatingButton.addEventListener('mouseleave', () => {
+              if (modal.style.display !== "block") {
+                  floatingButton.classList.remove('hover');
+                  floatingButton.classList.add('blink');
+              }
+          });
+  
+          floatingButton.addEventListener('click', () => {
+              const isLoggedIn = false;
+  
+              if (!isLoggedIn) {
+                  modal.style.display = "block";
+                  body.style.overflow = "hidden";
+                  floatingButton.classList.remove('hover');
+                  floatingButton.classList.remove('blink');
+              }
+          });
+  
+          closeModal.addEventListener('click', () => {
+              modal.style.display = "none";
+              body.style.overflow = "auto";
+          });
+  
+          window.addEventListener('click', (event) => {
+              if (event.target === modal) {
+                  modal.style.display = "none";
+                  body.style.overflow = "auto";
+              }
+          });
+          
+      </script>
+  </body>   
 </body>
 </html>

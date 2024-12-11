@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinor - Popüler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="navbar">
+            <img src="Remove-bg.ai_1732007045903.png" class="icon">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="populer.html">Popüler</a></li>
+                    <li><a href="yazilarimiz.html">Yazılarımız</a></li>
+                </ul>
+            </nav>
+            <div class="auth-container">
+                <!-- Arama kutusu -->
+                <div class="search-box" id="search-box">
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="Yazınız..." 
+                        class="srch"
+                        onkeypress="handleSearch(event)">
+                </div>
+                <i 
+                    class="fa-solid fa-magnifying-glass search-icon" 
+                    id="search-icon" 
+                    onclick="performSearch()">
+                </i>
+                <!-- Giriş yap ve kayıt ol butonları -->
+                <div class="auth-buttons">
+                  <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
+                  <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main id="main-content" class="blog-container">
+    <div class="blog-detail-container">
+        <h1>Yeni Blog Yazısı</h1>
+        <form action="/blog-ekle" method="POST">
+            <div class="form-group">
+                <label for="title">Başlık:</label>
+                <input type="text" id="title" name="title" placeholder="Blog başlığını girin" required>
+            </div>
+            <div class="form-group">
+                <label for="content">İçerik:</label>
+                <textarea id="content" name="content" rows="10" placeholder="Blog içeriğini buraya yazın..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Görsel Yükle:</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <button type="submit" class="btn">Gönder</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

@@ -527,3 +527,60 @@ header {
     opacity: 0; /* Başlangıçta görünmez */
     animation: fadeInScale 1s ease-in-out 0.8s forwards; /* Ölçek büyüme animasyonu */
 }
+/* Main içeriği için stil */
+
+/* Başlık ve içerik metinleri */
+#main-content h1 {
+    font-size: 2.5rem;
+    color: #05411b;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out; /* Animasyon */
+}
+
+#main-content label {
+    font-size: 1rem;
+    color: #013905;
+    font-weight: bold;
+    display: block; /* Alt alta dizilim */
+    margin-bottom: 5px;
+}
+
+#main-content input, #main-content textarea, #main-content button {
+    width: 96%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Buton stili */
+#main-content button {
+    background-color: #05411b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-content button:hover {
+    background-color: #07ad44;
+}
+
+/* Keyframe Animasyon */
+@keyframes fadeInUpMain {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Aşağıdan yukarı */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Normal pozisyon */
+    }
+}
+@media (max-width: 768px) {
+    #main-content {
+        max-width: 100%;
+        width: 95%;
+    }
+}
