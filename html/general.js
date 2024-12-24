@@ -152,6 +152,15 @@ const blogData = {
   document.getElementById("blog-image").src = blogData.image;
   document.getElementById("blog-body").innerHTML = blogData.content;
   
-
-
+  app.get('/api/posts', (req, res) => {
+    const posts = [
+        { id: 1, title: 'İlk Yazı', content: 'Bu bir test yazısıdır.' },
+        { id: 2, title: 'İkinci Yazı', content: 'Bu başka bir yazıdır.' },
+    ];
+    res.json(posts);
+});
+fetch('/api/posts')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
   
