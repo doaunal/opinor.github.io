@@ -408,6 +408,7 @@ nav ul li {
     color: #013905;
     margin: 60px;
     margin-top: 30px;
+    margin-left: 14%;
     margin-bottom: 10px;
     animation: fadeInUp 1s ease-in-out; /* Yukarıdan aşağı animasyon */
 }
@@ -416,7 +417,7 @@ nav ul li {
     font-size: 2.5rem;
     font-weight: normal;
     color: #013905c7;
-    margin-left: 70px;
+    margin-left: 15%;
     margin-bottom: 30px;
     animation: fadeInUp 1.5s ease-in-out; /* Yukarıdan aşağı animasyon */
 }
@@ -427,8 +428,9 @@ nav ul li {
     line-height: 1.6;
     text-align: left;
     margin-top: 50px;
-    margin-left: 70px;
-    margin-right: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-wrap: balance;
     animation: fadeInUp 2s ease-in-out; /* Yukarıdan aşağı animasyon */
 }
 a {
