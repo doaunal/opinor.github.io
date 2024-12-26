@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opinor - Popüler</title>
+    <title>Opinor - En Sık Tıklanan</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
     <div id="search-status" style="display:none; color: #333; font-size: 18px; padding: 10px; text-align: center;">
       Aranıyor...
     </div>
-    
+
     <main class="blog-container">
       <div id="blog-list" class="blog-list">
         <!-- Blog Kartları JavaScript ile Eklenecek -->
@@ -65,9 +65,34 @@
         <button id="next-btn" class="page-btn">&#8594;</button> <!-- Sonraki ok işareti -->
       </div>
   </main>
+  <button class="btn theme-button fixed-position" onclick="toggleColorPicker()">Tema Seç</button>
+
+  <div class="color-picker" id="colorPicker">
+      <div class="close-btn" onclick="toggleColorPicker()">×</div>
+      <h3>Renk Kombinasyonları</h3>
+      <button class="color-option" onclick="changeTheme('opinorKlasik')">Opinor Klasik</button>
+      <button class="color-option" onclick="changeTheme('opinorKoyu')">Opinor Koyu</button>
+      <button class="color-option" onclick="changeTheme('opinorAcik')">Opinor Açık</button>
+  </div>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.instagram.com/blogopinor/" target="_blank"> <img src="icons8-instagram-50.png" alt=""><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCx5eVHBz8RbGV0pCfUzyImg" target="_blank"> <img src="icons8-youtube-logo-48.png" alt=""><i class="fab fa-youtube"></i></a>
       
+      <!-- X logo görseli ile bağlantı -->
+      <a href="https://x.com/Opinorblog" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X Logo">
+      </a> <!-- X Logo -->
+      
+    </div>
+    <p>2024 Opinor tüm hakları saklıdır</p>
+    <p><a href="mailto:destek@opinor.com" style="color: white; text-decoration: none;">opinordestek@gmail.com</a></p>
+  </footer>
+
       <script src="general.js" defer></script>
  
+  
       <style>
         body {
             background-color: #e7cbaf;
@@ -79,7 +104,7 @@
 
         .floating-button {
             position: fixed;
-            bottom: 20px;
+            bottom: 100px;
             right: 20px;
             width: 60px;
             height: 60px;
@@ -210,83 +235,73 @@
             color: #c00;
         }
     </style>
-    <body>
+</head>
+<body>
+
 
       <!-- Floating Button -->
       <div class="floating-button" id="floatingButton">
-          <span>Yazmaya Başlamak İçin Tıklayın</span>
-          <span class="pencil-icon">✏️</span>
-      </div>
-  
-      <!-- Modal -->
-      <div id="modal" class="modal">
-          <button class="close-btn" id="closeModal">X</button>
-          <h2>Opinor'a Hoş Geldiniz!</h2>
-          <p>İçerik oluşturmaya başlamak için üye olmalısınız. Eğer üyeliğiniz varsa giriş yaptıktan sonra içeriğinizi oluşturmaya devam edebilirsiniz.</p>
-          <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
-          <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
-      </div>
-  
-      <script>
-          const floatingButton = document.getElementById('floatingButton');
-          const modal = document.getElementById('modal');
-          const signupBtn = document.getElementById('signupBtn');
-          const loginBtn = document.getElementById('loginBtn');
-          const closeModal = document.getElementById('closeModal');
-          const body = document.body;
-  
-          floatingButton.addEventListener('mouseenter', () => {
-              if (modal.style.display !== "block") {
-                  floatingButton.classList.add('hover');
-                  floatingButton.classList.remove('blink');
-              }
-          });
-  
-          floatingButton.addEventListener('mouseleave', () => {
-              if (modal.style.display !== "block") {
-                  floatingButton.classList.remove('hover');
-                  floatingButton.classList.add('blink');
-              }
-          });
-  
-          floatingButton.addEventListener('click', () => {
-              const isLoggedIn = false;
-  
-              if (!isLoggedIn) {
-                  modal.style.display = "block";
-                  body.style.overflow = "hidden";
-                  floatingButton.classList.remove('hover');
-                  floatingButton.classList.remove('blink');
-              }
-          });
-  
-          closeModal.addEventListener('click', () => {
-              modal.style.display = "none";
-              body.style.overflow = "auto";
-          });
-  
-          window.addEventListener('click', (event) => {
-              if (event.target === modal) {
-                  modal.style.display = "none";
-                  body.style.overflow = "auto";
-              }
-          });
-      </script>
-  </body>   
-  <footer class="footer">
-    <div class="social-links">
-      <a href="https://www.instagram.com/blogopinor/" target="_blank"> <img src="icons8-instagram-50.png" alt=""><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCx5eVHBz8RbGV0pCfUzyImg" target="_blank"> <img src="icons8-youtube-logo-48.png" alt=""><i class="fab fa-youtube"></i></a>
-      
-      <!-- X logo görseli ile bağlantı -->
-      <a href="https://x.com/Opinorblog" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X Logo">
-      </a> <!-- X Logo -->
-      
+        <span>Yazmaya Başlamak İçin Tıklayın</span>
+        <span class="pencil-icon">✏️</span> 
     </div>
-    <p>2024 Opinor tüm hakları saklıdır</p>
-    <p><a href="mailto:destek@opinor.com" style="color: white; text-decoration: none;">opinordestek@gmail.com</a></p>
-  </footer>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <button class="close-btn" id="closeModal">X</button>
+        <h2>Opinor'a Hoş Geldiniz!</h2>
+        <p>İçerik oluşturmaya başlamak için üye olmalısınız. Eğer üyeliğiniz varsa giriş yaptıktan sonra içeriğinizi oluşturmaya devam edebilirsiniz.</p>
+        <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
+        <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
+    </div>
 
+    <script>
+        const floatingButton = document.getElementById('floatingButton');
+        const modal = document.getElementById('modal');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const closeModal = document.getElementById('closeModal');
+        const body = document.body;
+
+        floatingButton.addEventListener('mouseenter', () => {
+            if (modal.style.display !== "block") {
+                floatingButton.classList.add('hover');
+                floatingButton.classList.remove('blink');
+            }
+        });
+
+        floatingButton.addEventListener('mouseleave', () => {
+            if (modal.style.display !== "block") {
+                floatingButton.classList.remove('hover');
+                floatingButton.classList.add('blink');
+            }
+        });
+
+        floatingButton.addEventListener('click', () => {
+            const isLoggedIn = false;
+
+            if (!isLoggedIn) {
+                modal.style.display = "block";
+                body.style.overflow = "hidden";
+                floatingButton.classList.remove('hover');
+                floatingButton.classList.remove('blink');
+            }
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+            body.style.overflow = "auto";
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                body.style.overflow = "auto";
+            }
+        });
+    </script>
 </body>
-</html>
+
+    </body>
+    </html>
+   
+    
