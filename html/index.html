@@ -72,6 +72,9 @@
       <a href="populer.html">Popüler</a> kısmına tıklayın.
     </p>
   </div>
+    </div>
+  </div>
+  
   
 </main>
   <script src="general.js" defer></script>
@@ -88,7 +91,7 @@
 
         .floating-button {
             position: fixed;
-            bottom: 20px;
+            bottom: 100px;
             right: 20px;
             width: 60px;
             height: 60px;
@@ -222,11 +225,21 @@
 </head>
 <body>
 
-    <!-- Floating Button -->
-    <div class="floating-button" id="floatingButton">
+
+      <!-- Floating Button -->
+      <div class="floating-button" id="floatingButton">
         <span>Yazmaya Başlamak İçin Tıklayın</span>
-        <span class="pencil-icon">✏️</span>
+        <span class="pencil-icon">✏️</span> 
     </div>
+    
+    </body>
+    </html>
+    
+    
+    </body>
+    </html>
+    
+      
 
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -234,7 +247,7 @@
         <h2>Opinor'a Hoş Geldiniz!</h2>
         <p>İçerik oluşturmaya başlamak için üye olmalısınız. Eğer üyeliğiniz varsa giriş yaptıktan sonra içeriğinizi oluşturmaya devam edebilirsiniz.</p>
         <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
-        <button class="btn signup" onclick="window.location.href='kayit.html'">Kayıt Ol</button>
+        <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
     </div>
 
     <script>
@@ -283,4 +296,146 @@
         });
     </script>
 </body>
-</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renk Seçimi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .card {
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .footer {
+            animation: slideUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn theme-button fixed-position" onclick="toggleColorPicker()">Tema Seç</button>
+
+    <div class="color-picker" id="colorPicker">
+        <div class="close-btn" onclick="toggleColorPicker()">×</div>
+        <h3>Renk Kombinasyonları</h3>
+        <button class="color-option" onclick="changeTheme('opinorKlasik')">Opinor Klasik</button>
+        <button class="color-option" onclick="changeTheme('opinorKoyu')">Opinor Koyu</button>
+        <button class="color-option" onclick="changeTheme('opinorAcik')">Opinor Açık</button>
+    </div>
+
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/continue-diet-order-pizza-portrait-questioned-thinking-attractive-woman-with-blond-hair-curls-touching-lip-looking-up-with-thoughtful-focused-expression-having-idea-gray-wall_176420-25039.jpg" alt="Resim" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title"> Opinor Nedir ?</h3>
+          <p class="card-text"> Opinor, teknoloji temalı bir blog sitesidir. İsmini Latince bence kelimesinden alan Opinor, teknoloji tutkunlarının fikirlerini paylaştığı, ve yeni şeyler öğrendiği eğlenceli bir platormdur.</p>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/903772250/photo/woman-working-on-laptop-with-white-screen-in-modern-office.jpg?s=612x612&w=0&k=20&c=okq75495gWZXvflKeyodsa5srKmminTAFKSBdu2VPU8=" alt="Resim" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Blog Yazmak Şimdi Daha Eğlenceli</h3>
+          <p class="card-text">Bloggerların yeni gözdesi olan Opinor blog yazmaya yeni bir soluk getiriyor. Teknolojinin kalbi burada sizlerle atıyor.</p>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://t4.ftcdn.net/jpg/09/72/51/91/360_F_972519101_4u36gHXZtC8BABbuFsJKPVtPygJwH1F6.jpg" alt="Resim" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Dünyadaki Gelişmelerden Geri Kalma!</h3>
+          <p class="card-text">Hızla gelişen dünyada teknolojik gelişme ve olaylardan haberdar olmak ve bilgi almak istiyorsan Opinor senin için burada. Özelleştirilebilir ve kullanıcı dostu arayüzüyle Opinor bir tık uzağında seni bekliyor.</p>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Footer Example</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+          body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+          }
+    
+         
+      .content {
+        flex: 1;
+      }
+    
+      .footer {
+        background-color: rgba(38, 175, 107, 0.5);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+    
+      .footer .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+    
+      .footer .social-links a:hover {
+        color: #ffcc00; /* Hover rengi */
+      }
+    
+      .footer p {
+        margin: 10px 0;
+      }
+    
+      /* X logo ile uyumlu hale getirmek için */
+      .footer .social-links img {
+        width: 24px; /* Aynı boyut */
+        height: 24px; /* Aynı boyut */
+        vertical-align: middle; /* Yatayda hizalama */
+        transition: transform 0.3s ease-in-out; /* Hoverda animasyon */
+      }
+    
+      .footer .social-links img:hover {
+        transform: scale(1.1); /* Hoverda biraz büyüme efekti */
+      }
+    </style>
+    </head>
+    <body>
+      <div class="content">
+    
+        <footer class="footer">
+          <div class="social-links">
+            <a href="https://www.instagram.com/blogopinor/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCx5eVHBz8RbGV0pCfUzyImg" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+            <!-- X logo görseli ile bağlantı -->
+            <a href="https://x.com/Opinorblog" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X Logo">
+            </a> <!-- X Logo -->
+            
+          </div>
+          <p>2024 Opinor tüm hakları saklıdır</p>
+          <p><a href="mailto:destek@opinor.com" style="color: white; text-decoration: none;">opinordestek@gmail.com</a></p>
+        </footer>
+      </div>
+    
+    </body>
+    </html>
+   
+    

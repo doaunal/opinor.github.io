@@ -527,6 +527,199 @@ header {
     opacity: 0; /* Başlangıçta görünmez */
     animation: fadeInScale 1s ease-in-out 0.8s forwards; /* Ölçek büyüme animasyonu */
 }
+
+body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+}
+
+/* Buton tasarımı */
+.theme-button {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+/* Buton sabit konum */
+.theme-button.fixed-position {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Buton animasyonu */
+.theme-button::after, .theme-button::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+
+.theme-button::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.theme-button:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.theme-button:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+.theme-button:hover {
+    color: var(--color2);
+}
+
+.theme-button:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+/* Renk seçici pencere */
+.color-picker {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 200px;
+    text-align: center;
+}
+
+.color-picker h3 {
+    margin: 0 0 15px;
+}
+
+.color-picker .color-option {
+    background-color: #00A97F;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.color-picker .color-option:hover {
+    background-color: #008a60;
+}
+
+.color-picker .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Tema renkleri */
+.opinor-klasik {
+    background-color: #e7cbaf; /* Klasik tema arka plan rengi */
+}
+
+.opinor-koyu {
+    background-color: #000000; /* Koyu tema arka plan rengi */
+    color: white; /* Koyu temada metin rengi beyaz olacak */
+}
+
+.opinor-acik {
+    background-color: #ffffff; /* Açık tema arka plan rengi */
+}
+.card {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    padding: 20px;
+    margin: 30px auto; /* Kartı merkezler */
+    background-color: #c1d5a4; /* Beyaz arka plan */
+    border-radius: 12px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1); /* Derinlik için gölge */
+    width: 80%; /* Genişlik, %100 yaparak ekranın tamamını alabilir */
+    max-width: 1200px; /* Maksimum genişlik */
+    transition: all 0.3s ease-in-out; /* Kartın hover ile animasyonu */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Hover efekti: yukarı kayma */
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.15); /* Hover gölgesi */
+  }
+  
+  .card-image {
+    width: 400px; /* Resmin genişliği */
+    height: 400px; /* Resmin yüksekliği */
+    object-fit: cover; /* Resmi kutuya uydurur */
+    border-radius: 8px; /* Resmin köşelerini yuvarlatır */
+    margin-right: 20px; /* Resim ile metin arasındaki boşluk */
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .card-title {
+    font-size: 2.5em; /* Başlık boyutu */
+    color: #333; /* Başlık rengi */
+    font-weight: bold; /* Başlık kalın */
+    margin-bottom: 12px;
+  }
+  
+  .card-text {
+    font-size: 2,5em; /* Metin boyutu */
+    color: #666; /* Metin rengi */
+    line-height: 1.6; /* Satır aralığı */
+    font-family: 'Arial', sans-serif; /* Font tipi */
+  }
+  
+  .card-footer {
+    margin-top: 15px;
+    text-align: right; /* Footer sağa hizalanmış */
+  }
+  
+  .card-footer a {
+    color: #0066cc; /* Link rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 1.1em; /* Link font boyutu */
+    font-weight: bold;
+  }
+  
+  .card-footer a:hover {
+    text-decoration: underline; /* Hover ile alt çizgi ekler */
+  }
+
 /* Main içeriği için stil */
 
 /* Başlık ve içerik metinleri */

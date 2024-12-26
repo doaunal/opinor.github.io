@@ -151,7 +151,43 @@ const blogData = {
   document.getElementById("blog-date").innerText = blogData.date;
   document.getElementById("blog-image").src = blogData.image;
   document.getElementById("blog-body").innerHTML = blogData.content;
+
+// Sayfa yüklendiğinde tema tercihini kontrol et ve uygula
+window.onload = function() {
+    const savedTheme = localStorage.getItem('theme'); // Kaydedilen temayı al
+    if (savedTheme) {
+        document.body.className = savedTheme; // Eğer varsa, kaydedilen temayı uygula
+    }
+};
+
+// Renk seçici pencereyi açma/kapama
+function toggleColorPicker() {
+    const picker = document.getElementById('colorPicker');
+    picker.style.display = picker.style.display === 'block' ? 'none' : 'block';
+}
+
+// Tema değişimi
+function changeTheme(theme) {
+    const body = document.body;
+
+    // Temaya göre renkleri değiştir
+    if (theme === 'opinorKlasik') {
+        body.className = 'opinor-klasik';
+        localStorage.setItem('theme', 'opinor-klasik'); // Temayı kaydet
+    } else if (theme === 'opinorKoyu') {
+        body.className = 'opinor-koyu';
+        localStorage.setItem('theme', 'opinor-koyu'); // Temayı kaydet
+    } else if (theme === 'opinorAcik') {
+        body.className = 'opinor-acik';
+        localStorage.setItem('theme', 'opinor-acik'); // Temayı kaydet
+    }
+
+    // Renk seçici pencereyi kapat
+    toggleColorPicker();
+}
+  
+
   
 
 
-  
+
