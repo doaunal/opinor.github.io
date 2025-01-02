@@ -185,7 +185,7 @@ function changeTheme(theme) {
     // Renk seçici pencereyi kapat
     toggleColorPicker();
 }
-
+  
 
   
 

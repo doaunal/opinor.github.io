@@ -11,7 +11,7 @@
     overflow: hidden;
 }*/
 body {
-    background-color: #e7cbaf;  /* Sayfanın tüm arka plan rengi */
+    background-color: #e7cbaf;  
 }
 .navbar{
     width: 100%;
@@ -58,12 +58,12 @@ nav ul li a:hover{
     color: #07ad44 ;
     text-decoration:wavy;
 }
-/* Search ve buton grubunu hizalama */
+
 .search {
     margin-right: 200px;
     display: flex;
     align-items: center;
-    gap: 5px; /* Aralarındaki boşluğu ayarlar */
+    gap: 5px; 
 }
 
 .search input {
@@ -81,10 +81,10 @@ nav ul li a:hover{
     border-radius: 5px;
 }
 
-/* Log In ve Sign In butonları için ek stiller */
+
 .auth-buttons {
     display: flex;
-    gap: 10px; /* Butonlar arasındaki boşluk */
+    gap: 10px; 
 }
 
 .auth-buttons .btn {
@@ -93,14 +93,14 @@ nav ul li a:hover{
 }
 
 .auth-buttons .login {
-    background-color: #05411b; /* Log In butonu rengi */
+    background-color: #05411b; 
 }
 
 .auth-buttons .signup {
-    background-color: #0b7331; /* Sign In butonu rengi */
+    background-color: #0b7331; 
 }
 
-/* Hover efektleri */
+
 .auth-buttons .btn:hover {
     opacity: 0.8;
 }
@@ -194,62 +194,62 @@ main.blog-container {
     font-weight: bold;
     color: #05411b;
 }
-/* Auth container kısmı flex olarak düzenlendi */
-/* Auth container kısmı flex olarak düzenlendi */
+
+
 .auth-container {
-    position: relative; /* Konumlandırmayı göreceli yapar */
+    position: relative; 
     display: flex;
     align-items: center;
-    gap: 10px; /* Öğeler arasındaki boşluğu ayarlar */
+    gap: 10px; 
 }
 
 .search-icon {
     cursor: pointer;
-    font-size: 20px; /* Büyüteç simgesinin boyutunu ayarla */
+    font-size: 20px; 
     transition: all 0.3s ease;
 }
 
 .search-icon:hover {
-    transform: scale(1.2); /* Hover efekti */
+    transform: scale(1.2); 
 }
 
 .search-box {
-    display: none; /* Başlangıçta gizli */
-    position: absolute; /* Mutlak konumlandırma */
-    right: calc(100% + 10px); /* Sağ tarafın tamamen dışına taşı ve 10px boşluk ekle */
-    top: 50%; /* Yatay olarak ortala */
-    transform: translateY(-50%); /* Dikey olarak ortala */
-    background: white; /* Arka plan rengi */
-    border: 1px solid #ccc; /* Çerçeve */
-    border-radius: 5px; /* Köşeleri yuvarlat */
-    padding: 5px; /* İç boşluk */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    display: none; 
+    position: absolute; 
+    right: calc(100% + 10px); 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: white; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .srch {
-    border: 1px solid #ccc; /* Yazı kutusuna çerçeve ekle */
-    border-radius: 5px; /* Köşeleri yuvarlat */
-    padding: 5px; /* İç boşluk */
-    font-size: 13px; /* Yazı boyutu */
-    width: 150px; /* Genişliği küçült */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 5px; 
+    font-size: 13px; 
+    width: 150px; 
 }
 
-/* Büyütece tıklanınca kutuyu göster */
+
 #search-icon:hover + .search-box,
 #search-box:hover {
-    display: block; /* Arama kutusunu göster */
+    display: block; 
 }
 
-/* Büyütece tıklanınca kutuyu göster */
+
 #search-icon:hover + .search-box,
 #search-box:hover {
-    display: block; /* Arama kutusunu göster */
+    display: block; 
 }
 
-/* Büyütece tıklanınca kutuyu göster */
+
 #search-icon:hover + .search-box,
 #search-box:hover {
-    display: flex; /* Arama kutusunu göster */
+    display: flex; 
 }
 .auth-buttons {
     display: flex;
@@ -257,7 +257,7 @@ main.blog-container {
     align-items: center;
 }
 
-/* Navbar kısmı düzenlendi */
+
 .navbar {
     width: 100%;
     display: flex;
@@ -271,7 +271,7 @@ main.blog-container {
 .navbar .auth-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Aralarındaki boşluğu ayarla */
+    gap: 10px; 
 }
 
 .auth-buttons .btn {
@@ -279,35 +279,35 @@ main.blog-container {
     font-size: 13px;
 }
 
-/* Büyüteç simgesine resim ekleyebilirsiniz (magnify.png) */
+
 .search-icon {
-    background-image: url('magnify.png'); /* Resmi ekleyin */
-    background-size: contain; /* Resmin boyutunun simgeye uygun olmasını sağlar */
-    background-repeat: no-repeat; /* Tekrarlamaması için */
+    background-image: url('magnify.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
     width: 20px;
     height: 20px;
     
 }
-/* Flexbox ile hizalama */
+
 .navbar nav {
-    flex-grow: 1; /* Menülerin sağa yaslanmasını engellemek için */
+    flex-grow: 1; 
     display: flex;
     justify-content: flex-start;
 }
 
-/* Navbardaki menü öğeleri */
+
 nav ul {
     display: flex;
     list-style-type: none;
-    gap: 30px; /* Menüler arasındaki boşluğu ayarlıyoruz */
+    gap: 30px; 
 }
 
-/* Butonlar hizalı ve sıralı olacak şekilde */
+
 nav ul li {
     display: inline-block;
     margin-left: 30px;
 }
-/* Blog Detayı */
+
 .blog-detail-container {
     padding: 20px;
     max-width: 800px;
@@ -373,16 +373,16 @@ nav ul li {
     font-size: 1.2rem;
     color: #013905c7;
     line-height: 1.6;
-    text-align: left; /* Sola hizalanır */
-    margin-top: 50px; /* Aşağı kaydırır */
-    margin-left: 80px; /* Soldan boşluk bırakır */
-    margin-right: 80px; /* Sağdan da eşit boşluk bırakmak isterseniz */
+    text-align: left; 
+    margin-top: 50px; 
+    margin-left: 80px; 
+    margin-right: 80px; 
 }
-/* Animasyon tanımı */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px); /* Aşağıdan yukarı hareket */
+        transform: translateY(50px); 
     }
     to {
         opacity: 1;
@@ -393,7 +393,7 @@ nav ul li {
 @keyframes fadeInLeft {
     from {
         opacity: 0;
-        transform: translateX(-50px); /* Soldan sağa hareket */
+        transform: translateX(-50px); 
     }
     to {
         opacity: 1;
@@ -401,7 +401,7 @@ nav ul li {
     }
 }
 
-/* Yazılar için animasyon */
+
 .welcome-message h1 {
     font-size: 5rem;
     font-weight: bold;
@@ -410,7 +410,7 @@ nav ul li {
     margin-top: 30px;
     margin-left: 14%;
     margin-bottom: 10px;
-    animation: fadeInUp 1s ease-in-out; /* Yukarıdan aşağı animasyon */
+    animation: fadeInUp 1s ease-in-out; 
 }
 
 .welcome-message h2 {
@@ -419,7 +419,7 @@ nav ul li {
     color: #013905c7;
     margin-left: 15%;
     margin-bottom: 30px;
-    animation: fadeInUp 1.5s ease-in-out; /* Yukarıdan aşağı animasyon */
+    animation: fadeInUp 1.5s ease-in-out; 
 }
 
 .welcome-message p {
@@ -431,22 +431,22 @@ nav ul li {
     margin-left: 15%;
     margin-right: 15%;
     text-wrap: balance;
-    animation: fadeInUp 2s ease-in-out; /* Yukarıdan aşağı animasyon */
+    animation: fadeInUp 2s ease-in-out; 
 }
 a {
-    color: #05411b; /* Link rengi */
-    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #05411b; 
+    text-decoration: none; 
 }
 
 a:hover {
-    text-decoration: underline; /* Üzerine gelindiğinde alt çizgi ekler */
-    color: #05411b; /* Farklı bir renk verir */
+    text-decoration: underline; 
+    color: #05411b; 
 }
-/* Animasyon tanımı */
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-50px); /* Yukarıdan aşağı hareket */
+        transform: translateY(-50px); 
     }
     to {
         opacity: 1;
@@ -454,42 +454,42 @@ a:hover {
     }
 }
 
-/* Header ve Navbar için animasyon */
+
 header {
-    animation: fadeInDown 1s ease-in-out; /* Header yukarıdan aşağı hareket */
+    animation: fadeInDown 1s ease-in-out; 
 }
 
 .navbar {
-    animation: fadeInDown 1.2s ease-in-out; /* Navbar yukarıdan aşağı hareket */
+    animation: fadeInDown 1.2s ease-in-out; 
 }
 
 .navbar img.icon {
-    animation: fadeInDown 1.4s ease-in-out; /* Logo yukarıdan aşağı hareket */
+    animation: fadeInDown 1.4s ease-in-out; 
 }
 
 .navbar nav ul li {
-    animation: fadeInDown 1.6s ease-in-out; /* Menü öğeleri yukarıdan aşağı hareket */
+    animation: fadeInDown 1.6s ease-in-out; 
 }
 
 .auth-container {
-    animation: fadeInDown 1.8s ease-in-out; /* Giriş/Kayıt ol kısmı yukarıdan aşağı hareket */
+    animation: fadeInDown 1.8s ease-in-out; 
 }
 /* Animasyon tanımları */
 @keyframes fadeInScale {
     from {
         opacity: 0;
-        transform: scale(0.9); /* Küçük başlayarak büyür */
+        transform: scale(0.9); 
     }
     to {
         opacity: 1;
-        transform: scale(1); /* Orijinal boyuta gelir */
+        transform: scale(1); 
     }
 }
 
 @keyframes slideInFromRight {
     from {
         opacity: 0;
-        transform: translateX(50px); /* Sağdan sola hareket */
+        transform: translateX(50px); 
     }
     to {
         opacity: 1;
@@ -500,7 +500,7 @@ header {
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
-        transform: translateX(-50px); /* Soldan sağa hareket */
+        transform: translateX(-50px); 
     }
     to {
         opacity: 1;
@@ -508,26 +508,26 @@ header {
     }
 }
 
-/* Blog kartları için animasyon */
+
 .blog-card {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: fadeInScale 1s ease-in-out forwards; /* Ölçek büyüme animasyonu */
+    opacity: 0; 
+    animation: fadeInScale 1s ease-in-out forwards; 
 }
 
-/* Sayfalama butonları için animasyon */
+
 #prev-btn {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: slideInFromLeft 1s ease-in-out 0.5s forwards; /* Soldan sağa hareket */
+    opacity: 0; 
+    animation: slideInFromLeft 1s ease-in-out 0.5s forwards; 
 }
 
 #next-btn {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: slideInFromRight 1s ease-in-out 0.5s forwards; /* Sağdan sola hareket */
+    opacity: 0; 
+    animation: slideInFromRight 1s ease-in-out 0.5s forwards; 
 }
 
 #page-number {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: fadeInScale 1s ease-in-out 0.8s forwards; /* Ölçek büyüme animasyonu */
+    opacity: 0; 
+    animation: fadeInScale 1s ease-in-out 0.8s forwards; 
 }
 
 body {
@@ -536,7 +536,7 @@ body {
     margin: 0;
 }
 
-/* Buton tasarımı */
+
 .theme-button {
     --color: #00A97F;
     --color2: rgb(10, 25, 30);
@@ -556,7 +556,7 @@ body {
     color: var(--color);
 }
 
-/* Buton sabit konum */
+
 .theme-button.fixed-position {
     position: fixed;
     bottom: 20px;
@@ -564,7 +564,7 @@ body {
     z-index: 999;
 }
 
-/* Buton animasyonu */
+
 .theme-button::after, .theme-button::before {
     content: '';
     display: block;
@@ -602,7 +602,7 @@ body {
     transform: scale(.98);
 }
 
-/* Renk seçici pencere */
+
 .color-picker {
     display: none;
     position: fixed;
@@ -645,57 +645,47 @@ body {
     cursor: pointer;
 }
 
-/* Tema renkleri */
+
 .opinor-klasik {
-    background-color: #e7cbaf; /* Klasik tema arka plan rengi */
+    background-color: #e7cbaf; 
 }
 
 .opinor-koyu {
-    background-color: #000000; /* Koyu tema arka plan rengi */
-    color: white; /* Koyu temada metin rengi beyaz olacak */
+    background-color: #000000; 
+    color: white; 
 }
 
 .opinor-acik {
-    background-color: #ffffff; /* Açık tema arka plan rengi */
+    background-color: #ffffff; 
 }
-/* Aşağıdan yukarı animasyon tanımı */
-@keyframes slideUp {
-    from {
-      opacity: 0; /* Görünmez başlar */
-      transform: translateY(20px); /* 20px aşağıdan başlar */
-    }
-    to {
-      opacity: 1; /* Görünür olur */
-      transform: translateY(0); /* Normal konuma gelir */
-    }
-  }
-  
-  .card {
+.card {
     display: flex;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    border: 1px solid rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    margin: 30px auto; /* Kartı merkezler */
-    background-color: #c1d5a4; /* Beyaz arka plan */
-    border-radius: 12px; /* Yuvarlatılmış köşeler */
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1); /* Derinlik için gölge */
-    width: 80%; /* Genişlik, %100 yaparak ekranın tamamını alabilir */
-    max-width: 1200px; /* Maksimum genişlik */
-    transition: all 0.3s ease-in-out; /* Kartın hover ile animasyonu */
-    animation: slideUp 1s ease-out forwards; /* Yüklenme animasyonu */
+    margin: 30px auto; 
+    background-color: #c1d5a4; 
+    border-radius: 12px; 
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+    max-width: 1200px; 
+    transition: all 0.3s ease-in-out; 
   }
-  
+  .card {
+    animation: slideUp 1s ease-out forwards;
+}
+
   .card:hover {
-    transform: translateY(-5px); /* Hover efekti: yukarı kayma */
-    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.15); /* Hover gölgesi */
+    transform: translateY(-5px); 
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.15); 
   }
   
   .card-image {
-    width: 400px; /* Resmin genişliği */
-    height: 400px; /* Resmin yüksekliği */
-    object-fit: cover; /* Resmi kutuya uydurur */
-    border-radius: 8px; /* Resmin köşelerini yuvarlatır */
-    margin-right: 20px; /* Resim ile metin arasındaki boşluk */
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-right: 20px; 
   }
   
   .card-content {
@@ -706,49 +696,49 @@ body {
   }
   
   .card-title {
-    font-size: 2.5em; /* Başlık boyutu */
-    color: #333; /* Başlık rengi */
-    font-weight: bold; /* Başlık kalın */
+    font-size: 2.5em; 
+    color: #333; 
+    font-weight: bold; 
     margin-bottom: 12px;
   }
   
   .card-text {
-    font-size: 2,5em; /* Metin boyutu */
-    color: #666; /* Metin rengi */
-    line-height: 1.6; /* Satır aralığı */
-    font-family: 'Arial', sans-serif; /* Font tipi */
+    font-size: 2,5em; 
+    color: #666; 
+    line-height: 1.6; 
+    font-family: 'Arial', sans-serif; 
   }
   
   .card-footer {
     margin-top: 15px;
-    text-align: right; /* Footer sağa hizalanmış */
+    text-align: right; 
   }
   
   .card-footer a {
-    color: #0066cc; /* Link rengi */
-    text-decoration: none; /* Alt çizgiyi kaldır */
-    font-size: 1.1em; /* Link font boyutu */
+    color: #0066cc; 
+    text-decoration: none; 
+    font-size: 1.1em; 
     font-weight: bold;
   }
   
   .card-footer a:hover {
-    text-decoration: underline; /* Hover ile alt çizgi ekler */
+    text-decoration: underline; 
   }
-/* Main içeriği için stil */
 
-/* Başlık ve içerik metinleri */
+
+
 #main-content h1 {
     font-size: 2.5rem;
     color: #05411b;
     margin-bottom: 20px;
-    animation: fadeInUp 1.5s ease-in-out; /* Animasyon */
+    animation: fadeInUp 1.5s ease-in-out; 
 }
 
 #main-content label {
     font-size: 1rem;
     color: #013905;
     font-weight: bold;
-    display: block; /* Alt alta dizilim */
+    display: block; 
     margin-bottom: 5px;
 }
 
@@ -761,7 +751,7 @@ body {
     font-size: 1rem;
 }
 
-/* Buton stili */
+
 #main-content button {
     background-color: #05411b;
     color: white;
@@ -774,15 +764,15 @@ body {
     background-color: #07ad44;
 }
 
-/* Keyframe Animasyon */
+
 @keyframes fadeInUpMain {
     from {
         opacity: 0;
-        transform: translateY(50px); /* Aşağıdan yukarı */
+        transform: translateY(50px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Normal pozisyon */
+        transform: translateY(0); 
     }
 }
 @media (max-width: 768px) {
@@ -792,17 +782,6 @@ body {
     }
 }
 
-@keyframes slideUp {
-    from {
-      opacity: 0; /* Görünmez başlar */
-      transform: translateY(20px); /* 20px aşağıdan başlar */
-    }
-    to {
-      opacity: 1; /* Görünür olur */
-      transform: translateY(0); /* Normal konuma gelir */
-    }
-  }
-  
 .footer {
     background-color: rgba(38, 175, 107, 0.5);
     color: white;
@@ -819,23 +798,23 @@ body {
   }
 
   .footer .social-links a:hover {
-    color: #ffcc00; /* Hover rengi */
+    color: #ffcc00; 
   }
 
   .footer p {
     margin: 10px 0;
   }
 
-  /* X logo ile uyumlu hale getirmek için */
+
   .footer .social-links img {
-    width: 24px; /* Aynı boyut */
-    height: 24px; /* Aynı boyut */
-    vertical-align: middle; /* Yatayda hizalama */
-    transition: transform 0.3s ease-in-out; /* Hoverda animasyon */
+    width: 24px; 
+    height: 24px; 
+    vertical-align: middle; 
+    transition: transform 0.3s ease-in-out; 
   }
 
   .footer .social-links img:hover {
-    transform: scale(1.1); /* Hoverda biraz büyüme efekti */
+    transform: scale(1.1); 
   }
   .card {
     animation: slideUp 1s ease-out forwards;

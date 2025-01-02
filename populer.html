@@ -22,7 +22,7 @@
                 </ul>
             </nav>
             <div class="auth-container">
-                <!-- Arama kutusu -->
+               
                 <div class="search-box" id="search-box">
                     <input 
                         type="search" 
@@ -36,7 +36,7 @@
                     id="search-icon" 
                     onclick="performSearch()">
                 </i>
-                <!-- Giriş yap ve kayıt ol butonları -->
+                
                 <div class="auth-buttons">
                   <button class="btn login" onclick="window.location.href='giris.html'">Giriş Yap</button>
                   <button class="btn signup" onclick="window.location.href='kayitol.html'">Kayıt Ol</button>
@@ -50,19 +50,19 @@
         <p>Aradığınız metin: <span id="search-text"></span></p>
       </div>
     
-      <!-- Arama durumu yazısı -->
+     
     <div id="search-status" style="display:none; color: #333; font-size: 18px; padding: 10px; text-align: center;">
       Aranıyor...
     </div>
 
     <main class="blog-container">
       <div id="blog-list" class="blog-list">
-        <!-- Blog Kartları JavaScript ile Eklenecek -->
+       
       </div>
       <div class="pagination">
-        <button id="prev-btn" class="page-btn" disabled>&#8592;</button> <!-- Önceki ok işareti -->
-        <span id="page-number">1</span> <!-- Sayfa numarası -->
-        <button id="next-btn" class="page-btn">&#8594;</button> <!-- Sonraki ok işareti -->
+        <button id="prev-btn" class="page-btn" disabled>&#8592;</button>
+        <span id="page-number">1</span> 
+        <button id="next-btn" class="page-btn">&#8594;</button> 
       </div>
   </main>
   <button class="btn theme-button fixed-position" onclick="toggleColorPicker()">Tema Seç</button>
@@ -80,10 +80,10 @@
       <a href="https://www.instagram.com/blogopinor/" target="_blank"> <img src="icons8-instagram-50.png" alt=""><i class="fab fa-instagram"></i></a>
       <a href="https://www.youtube.com/channel/UCx5eVHBz8RbGV0pCfUzyImg" target="_blank"> <img src="icons8-youtube-logo-48.png" alt=""><i class="fab fa-youtube"></i></a>
       
-      <!-- X logo görseli ile bağlantı -->
+      
       <a href="https://x.com/Opinorblog" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X Logo">
-      </a> <!-- X Logo -->
+      </a> 
       
     </div>
     <p>2024 Opinor tüm hakları saklıdır</p>
@@ -92,6 +92,7 @@
 
       <script src="general.js" defer></script>
  
+  
       <style>
         body {
             background-color: #e7cbaf;
@@ -174,7 +175,7 @@
             to { width: 100%; }
         }
 
-        /* Modal Styles */
+        
         .modal {
             display: none;
             position: fixed;
@@ -238,13 +239,13 @@
 <body>
 
 
-      <!-- Floating Button -->
+      
       <div class="floating-button" id="floatingButton">
         <span>Yazmaya Başlamak İçin Tıklayın</span>
         <span class="pencil-icon">✏️</span> 
     </div>
     
-    <!-- Modal -->
+   
     <div id="modal" class="modal">
         <button class="close-btn" id="closeModal">X</button>
         <h2>Opinor'a Hoş Geldiniz!</h2>
