@@ -1,49 +1,49 @@
-/* Genel ayarlar */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Caudex', sans-serif;
-    background-color: #e7cbaf; /* Arka plan rengi */
+    background-color: #e7cbaf; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Sayfanın tam yüksekliği */
+    height: 100vh; 
 }
 
-/* Dış kutu */
+
 .outer-box {
     padding: 40px;
-    border: 2px solid #05411b; /* Dış kutunun çerçevesi */
-    border-radius: 15px; /* Köşeleri yuvarlat */
-    background-color: #f9f9f9; /* Hafif arka plan rengi */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    width: 500px; /* Dış kutunun genişliği */
-    max-width: 100%; /* Ekran boyutuna göre esnek genişlik */
+    border: 2px solid #05411b; 
+    border-radius: 15px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 500px; 
+    max-width: 100%; 
 }
 
-/* Log in kutusu */
+
 .login-box {
-    background-color: #ffffff; /* Kutunun arka plan rengi */
+    background-color: #ffffff; 
     padding: 30px 40px;
-    border-radius: 10px; /* Köşeleri yuvarlat */
-    text-align: center; /* İçerik ortalansın */
+    border-radius: 10px; 
+    text-align: center; 
     max-width: 400px;
     width: 100%;
 }
 
-/* Başlık */
+
 .login-box h2 {
     margin-bottom: 20px;
     color: #05411b;
 }
 
-/* Input grupları */
+
 .input-group {
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Etiketler */
+
 .input-group label {
     display: block;
     margin-bottom: 5px;
@@ -51,7 +51,7 @@ body {
     color: #333;
 }
 
-/* Input alanları */
+
 .input-group input {
     width: 100%;
     padding: 10px;
@@ -60,7 +60,7 @@ body {
     font-size: 14px;
 }
 
-/* Log In butonu */
+
 .btn {
     background-color: #05411b;
     color: #ffffff;
@@ -72,12 +72,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Buton hover efekti */
+
 .btn:hover {
     background-color: #0b7331;
 }
 
-/* Sign up linki */
+
 .signup-link {
     margin-top: 15px;
     font-size: 14px;
@@ -106,7 +106,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Buton Hover Efekti */
+
 .back-home-btn:hover {
     background-color: #0b7331;
 }

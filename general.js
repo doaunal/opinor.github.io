@@ -16,17 +16,17 @@ const blogPosts = [
 const postsPerPage = 10;
 let currentPage = 1;
 
-// Blog yazılarını render et
+
 function renderPosts() {
     const blogList = document.getElementById("blog-list");
-    blogList.innerHTML = ""; // Mevcut içerik temizlenir
+    blogList.innerHTML = ""; 
 
-    // Sayfa aralığını belirle
+
     const start = (currentPage - 1) * postsPerPage;
     const end = start + postsPerPage;
     const postsToShow = blogPosts.slice(start, end);
 
-    // Blog yazılarını render et
+  
     postsToShow.forEach(post => {
         const blogCard = document.createElement("div");
         blogCard.className = "blog-card";
@@ -42,15 +42,15 @@ function renderPosts() {
         blogList.appendChild(blogCard);
     });
 
-    // Sayfa numarasını güncelle
+   
     document.getElementById("page-number").textContent = currentPage;
 
-    // Pagination butonlarını yönet
+  
     document.getElementById("prev-btn").disabled = currentPage === 1;
     document.getElementById("next-btn").disabled = currentPage === Math.ceil(blogPosts.length / postsPerPage);
 }
 
-// Önceki sayfaya git
+
 document.getElementById("prev-btn").addEventListener("click", () => {
     if (currentPage > 1) {
         currentPage--;
@@ -58,7 +58,7 @@ document.getElementById("prev-btn").addEventListener("click", () => {
     }
 });
 
-// Sonraki sayfaya git
+
 document.getElementById("next-btn").addEventListener("click", () => {
     if (currentPage < Math.ceil(blogPosts.length / postsPerPage)) {
         currentPage++;
@@ -66,11 +66,11 @@ document.getElementById("next-btn").addEventListener("click", () => {
     }
 });
 
-// İlk render
+
 renderPosts();
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Tüm JavaScript kodunuz buraya
+    
     const prevButton = document.getElementById("prev-btn");
     const nextButton = document.getElementById("next-btn");
 
@@ -87,49 +87,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
-    // Büyüteç simgesini seçiyoruz
+    
     const searchIcon = document.getElementById("search-icon");
     const searchBox = document.getElementById("search-box");
 
-    // Büyüteç simgesine tıklanınca arama kutusunu aç/kapat
+   
     searchIcon.addEventListener("click", () => {
         if (searchBox.style.display === "none" || searchBox.style.display === "") {
-            searchBox.style.display = "block"; // Göster
+            searchBox.style.display = "block";
         } else {
-            searchBox.style.display = "none"; // Gizle
+            searchBox.style.display = "none"; 
         }
     });
 });
-// Enter'a basıldığında arama yapma işlevi
+
 function handleSearch(event) {
     if (event.key === "Enter") {
         performSearch();
     }
 }
 
-// Arama işlemini gerçekleştirme
-// Arama işlemini gerçekleştirme
+
 function performSearch() {
     const searchInput = document.getElementById("search-input").value.trim();
-    const searchStatus = document.getElementById("search-status"); // Durum yazısını seçiyoruz
+    const searchStatus = document.getElementById("search-status"); 
 
     if (searchInput) {
-        // Burada arama işlemi yapılır
+       
         console.log("Aranıyor:", searchInput);
 
-        // "Aranıyor..." mesajını ekranda gösterebiliriz (örneğin bir div ile)
-        searchStatus.style.display = "block"; // Yazıyı göster
+        searchStatus.style.display = "block"; 
 
-        // Arama tamamlandıktan sonra 2 saniye sonra yazıyı gizle
         setTimeout(() => {
-            searchStatus.style.display = "none"; // Yazıyı gizle
-        }, 2000); // 2 saniye simülasyonu
+            searchStatus.style.display = "none"; 
+        }, 2000);
     } else {
-        // Eğer arama kutusu boşsa, yazıyı gizle
+        
         searchStatus.style.display = "none";
     }
 }
-// Blog sayfasındaki dinamik verileri doldurmak için bir JSON örneği:
+
 const blogData = {
     title: "Nasıl Daha Verimli Kod Yazılır?",
     author: "Ali Veli",
@@ -145,44 +142,44 @@ const blogData = {
     `
   };
   
-  // Blog verilerini DOM'a aktar
+ 
   document.getElementById("blog-title").innerText = blogData.title;
   document.getElementById("blog-author").innerText = blogData.author;
   document.getElementById("blog-date").innerText = blogData.date;
   document.getElementById("blog-image").src = blogData.image;
   document.getElementById("blog-body").innerHTML = blogData.content;
 
-// Sayfa yüklendiğinde tema tercihini kontrol et ve uygula
+
 window.onload = function() {
-    const savedTheme = localStorage.getItem('theme'); // Kaydedilen temayı al
+    const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-        document.body.className = savedTheme; // Eğer varsa, kaydedilen temayı uygula
+        document.body.className = savedTheme; 
     }
 };
 
-// Renk seçici pencereyi açma/kapama
+
 function toggleColorPicker() {
     const picker = document.getElementById('colorPicker');
     picker.style.display = picker.style.display === 'block' ? 'none' : 'block';
 }
 
-// Tema değişimi
+
 function changeTheme(theme) {
     const body = document.body;
 
-    // Temaya göre renkleri değiştir
+    
     if (theme === 'opinorKlasik') {
         body.className = 'opinor-klasik';
-        localStorage.setItem('theme', 'opinor-klasik'); // Temayı kaydet
+        localStorage.setItem('theme', 'opinor-klasik'); 
     } else if (theme === 'opinorKoyu') {
         body.className = 'opinor-koyu';
-        localStorage.setItem('theme', 'opinor-koyu'); // Temayı kaydet
+        localStorage.setItem('theme', 'opinor-koyu'); 
     } else if (theme === 'opinorAcik') {
         body.className = 'opinor-acik';
-        localStorage.setItem('theme', 'opinor-acik'); // Temayı kaydet
+        localStorage.setItem('theme', 'opinor-acik'); 
     }
 
-    // Renk seçici pencereyi kapat
+   
     toggleColorPicker();
 }
   

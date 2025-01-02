@@ -10,7 +10,7 @@ $parola_err="";
 
 if(isset($_POST["giris"]))
 {
- // kullanıcı adı doğrulama
+ 
   if(empty($_POST["kullaniciadi"])) 
   {
     $username_err = "Lütfen kullanıcı adı giriniz";
@@ -22,7 +22,7 @@ if(isset($_POST["giris"]))
 
 
 
-  // parola doğrulama
+ 
   if(empty($_POST["parola"]))
   {
     $parola_err="Parola boş geçilemez.";

@@ -10,7 +10,7 @@ $parolatkr_err="";
 
 if(isset($_POST["kaydet"]))
 {
- // kullanıcı adı doğrulama
+
   if(empty($_POST["kullaniciadi"])) 
   {
     $username_err = "Lütfen kullanıcı adı giriniz";
@@ -29,7 +29,7 @@ if(isset($_POST["kaydet"]))
   }
 
 
-  // e mail doğrulama
+
   if(empty($_POST["email"]))
   {
     $email_err = "E-mail boş olamaz";
